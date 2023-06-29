@@ -1,0 +1,12 @@
+. ~/.config/fish/aliases.fish
+
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    fzf_configure_bindings --git_log=\cg --directory=\cf
+    set fzf_fd_opts --exclude=Library --exclude=Pictures --exclude=Public --exclude=Movies --exclude=Music
+    set -x FZF_DEFAULT_OPTS --color=fg:#c7c7c7,bg:#2d2a2e,hl:#ab9df2 --color=fg+:#ffffff,bg+:#2d2a2e,hl+:#78dce8 --color=info:#c7c7c7,prompt:#a9dc76,pointer:#a9dc76 --color=marker:#ffd866,spinner:#ff6188,header:#fc9867
+end
+
+
+# Text editor
+set -gx EDITOR nvim

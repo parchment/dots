@@ -1,0 +1,31 @@
+#!/bin/sh
+
+system_type=$(uname -s)
+
+if [ "$system_type" = "Darwin" ]; then
+
+  brew tap Homebrew/bundle;
+  brew bundle --file=~/.config/brewfile/Brewfile;
+  sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells';
+  chsh -s /opt/homebrew/bin/fish;
+  python3 -m pip install spacy;
+  python3 -m pip install -U socketIO-client;
+  python3 -m spacy download en_core_web_md;
+
+elif  [ "$system_type" = "Linux" ]; then
+
+  sudo apt install curl fzf nodejs npm neovim ranger
+  sudo apt-add-repository ppa:fish-shell/release-3
+  sudo apt update
+  sudo apt install fish
+  chsh -s /usr/bin/fish
+  wget -O ~/Desktop/hyper_3.2.3_amd64.deb https://releases.hyper.is/download/deb
+  sudo apt install '/home/victor/Desktop/hyper_3.2.3_amd64.deb'
+
+fi
+
+sudo npm install -g prettier;
+sudo npm install -g commitizen;
+sudo npm install -g typescript;
+sudo chown -R 501:20 "/Users/victor/.npm";
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish

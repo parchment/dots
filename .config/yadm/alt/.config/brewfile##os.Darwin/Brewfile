@@ -1,0 +1,44 @@
+# Installation directory
+cask_args appdir: '/Applications'
+tap 'dzfrias/formulae'
+tap 'homebrew/core'
+
+# General utilities
+brew 'bash'
+brew 'coreutils'
+brew 'fd'
+brew 'hurl'
+brew 'm-cli'
+brew 'mas'
+brew 'openssl'
+brew 's-search'
+
+# File management
+brew 'fzf'
+brew 'helix'
+brew 'pandoc'
+brew 'projectable'
+
+# Package/version managers
+brew 'git'
+brew 'node'
+
+# Databases
+brew 'mysql'
+brew 'neo4j'
+brew 'postgresql@14'
+
+# Miscellaneous
+brew 'fish'
+brew 'frotz'
+brew 'zola'
+
+# Casks
+cask '1password'
+cask 'hyper'
+cask 'postman'
+cask 'jetbrains-toolbox'
+
+# Applications
+mas "1Password for Safari", id: 1569813296;
+mas "Tailscale", id: 1475387142;
