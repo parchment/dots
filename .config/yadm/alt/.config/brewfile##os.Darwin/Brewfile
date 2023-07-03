@@ -19,6 +19,7 @@ brew 'fzf'
 brew 'helix'
 brew 'pandoc'
 brew 'projectable'
+brew 'rsync'
 
 # Package/version managers
 brew 'git'
