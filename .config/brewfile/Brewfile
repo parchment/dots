@@ -1,0 +1,38 @@
+# Installation Directory
+cask_args appdir: '/Applications'
+
+# Browsers
+cask 'firefox'
+cask 'google-chrome'
+
+# File Management
+brew 'csvkit'
+brew 'fzf'
+brew 'helix'
+brew 'jq'
+brew 'xplr'
+brew 'zoxide'
+
+# General Utilities
+brew 'atuin'
+brew 'hurl'
+brew 'lazygit'
+brew 'node'
+brew 'pnpm'
+brew 's-search'
+
+# Miscellaneous
+brew 'fish'
+brew 'frotz'
+
+# Casks - Applications
+cask '1password'
+cask 'hyper'
+cask 'jetbrains-toolbox'
+cask 'postman'
+cask 'raycast'
+cask 'sketch'
+
+# Applications (via Mac App Store)
+brew 'mas'
+mas 'Tailscale', id: 1475387142

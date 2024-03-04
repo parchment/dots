@@ -1,0 +1,3 @@
+package git@github.com:jorgebucaran/nvm.fish.git
+theme default
+theme pure

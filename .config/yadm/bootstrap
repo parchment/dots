@@ -1,0 +1,10 @@
+#!/bin/sh
+
+brew tap Homebrew/bundle;
+brew bundle --file=~/.config/brewfile/Brewfile;
+
+sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells';
+chsh -s /opt/homebrew/bin/fish;
+
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+npm install -g turbo eslint prettier typescript
