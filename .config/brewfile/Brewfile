@@ -15,11 +15,9 @@ brew 'zoxide'
 
 # General Utilities
 brew 'atuin'
-brew 'hurl'
 brew 'lazygit'
 brew 'node'
 brew 'pnpm'
-brew 's-search'
 
 # Miscellaneous
 brew 'fish'
