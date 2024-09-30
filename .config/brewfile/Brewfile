@@ -10,7 +10,7 @@ brew 'csvkit'
 brew 'fzf'
 brew 'helix'
 brew 'jq'
-brew 'xplr'
+brew 'sq'
 brew 'zoxide'
 
 # General Utilities
