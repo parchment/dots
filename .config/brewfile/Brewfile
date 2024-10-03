@@ -25,11 +25,13 @@ brew 'frotz'
 
 # Casks - Applications
 cask '1password'
-cask 'hyper'
+cask 'wezterm'
 cask 'jetbrains-toolbox'
-cask 'postman'
 cask 'raycast'
 cask 'sketch'
+
+# Casks - Fonts
+cask 'font-hack'
 
 # Applications (via Mac App Store)
 brew 'mas'
