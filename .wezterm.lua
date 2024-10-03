@@ -12,7 +12,7 @@ config.window_padding = {
   bottom = 10,
 }
 
-config.font = wezterm.font 'Hack'
+config.font = wezterm.font('JetBrains Mono', { weight = 'Bold' })
 config.font_size = 13.0
 font_antialias = "Subpixel"
 config.line_height = 1.1
