@@ -12,7 +12,7 @@ config.window_padding = {
   bottom = 10,
 }
 
-config.font = wezterm.font('JetBrains Mono', { weight = 'Bold' })
+config.font = wezterm.font('JetBrains Mono', { weight = 'Medium' })
 config.font_size = 13.0
 font_antialias = "Subpixel"
 config.line_height = 1.1
@@ -67,11 +67,23 @@ config.colors = {
  }
 config.use_fancy_tab_bar = true
 config.show_new_tab_button_in_tab_bar = false
- config.window_frame = {
-   font = wezterm.font { family = 'Hack', weight = 'Bold' },
-   font_size = 13.0,
-   active_titlebar_bg = '#282529',
-   inactive_titlebar_bg = '#282529',
- }
+
+function basename(s)
+  return string.gsub(s, '(.*[/\\])(.*)', '%2')
+end
+
+wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_width)
+  local pane = tab.active_pane
+  local title = pane.foreground_process_name
+
+  return string.format("%d: %s", tab.tab_index + 1, basename(title))
+end)
+
+config.window_frame = {
+    font = wezterm.font { family = 'Hack', weight = 'Bold' },
+    font_size = 13.0,
+    active_titlebar_bg = '#282529',
+    inactive_titlebar_bg = '#282529',
+}
 
 return config
