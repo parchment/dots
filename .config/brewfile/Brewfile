@@ -38,3 +38,4 @@ cask 'font-jetbrains-mono'
 # Applications (via Mac App Store)
 brew 'mas'
 mas 'Tailscale', id: 1475387142
+mas 'Screens 5', id: 1663047912
