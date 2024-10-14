@@ -18,6 +18,8 @@ brew 'atuin'
 brew 'lazygit'
 brew 'node'
 brew 'pnpm'
+brew 'task'
+brew 'taskwarrior-tui'
 
 # Miscellaneous
 brew 'fish'
