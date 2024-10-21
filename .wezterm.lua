@@ -80,7 +80,7 @@ wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_wid
 end)
 
 config.window_frame = {
-    font = wezterm.font { family = 'Hack', weight = 'Bold' },
+    font = wezterm.font { family = 'JetBrains Mono', weight = 'Bold' },
     font_size = 13.0,
     active_titlebar_bg = '#282529',
     inactive_titlebar_bg = '#282529',
