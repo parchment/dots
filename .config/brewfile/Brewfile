@@ -18,8 +18,6 @@ brew 'atuin'
 brew 'lazygit'
 brew 'node'
 brew 'pnpm'
-brew 'task'
-brew 'taskwarrior-tui'
 
 # Miscellaneous
 brew 'fish'
@@ -28,9 +26,10 @@ brew 'frotz'
 # Casks - Applications
 cask '1password'
 cask 'wezterm'
-cask 'jetbrains-toolbox'
 cask 'raycast'
 cask 'sketch'
+cask 'tableplus'
+cask 'zed'
 
 # Casks - Fonts
 cask 'font-jetbrains-mono'
