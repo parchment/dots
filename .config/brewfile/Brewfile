@@ -25,6 +25,7 @@ brew 'frotz'
 
 # Casks - Applications
 cask '1password'
+cask 'orbstack'
 cask 'wezterm'
 cask 'raycast'
 cask 'sketch'
