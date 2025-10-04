@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -e  # Exit on error
+
+echo "Running bootstrap script..."
+
+# Install Homebrew packages from Brewfile
+echo "Installing packages from Brewfile..."
+brew bundle --file="$HOME/.config/brew/Brewfile"
+
+# Add fish to allowed shells (if not already there)
+echo "Adding fish to /etc/shells..."
+sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
+
+# Set fish as default shell (if not already)
+echo "Setting fish as default shell..."
+chsh -s /opt/homebrew/bin/fish
+
+# Install rustup (if not already installed)
+echo "Installing Rust..."
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+
+# Install Oh My Fish (if not already installed)
+echo "Installing Oh My Fish..."
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+
+# Install yazi plugin (if yazi is installed)
+echo "Installing yazi full-border plugin..."
+ya pkg add yazi-rs/plugins:full-border
+
+echo ""
+echo "Bootstrap complete! 🎉"
